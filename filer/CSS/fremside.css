@@ -1,0 +1,265 @@
+body {
+	background-image: url(/img/bg1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Avenir, "Helvetica Neue", sans-serif !important;
+	color: #2a2524 !important;
+	position: relative;
+	text-shadow: 3px 3px 3px white;
+}
+
+a, a:visited {
+	color: #2a2524 !important;
+}
+
+#wrap {
+	width: 80%;
+	margin: auto;
+	position: relative;
+	overflow: auto;
+	margin-bottom: 100px;
+}
+
+#main {
+	width: 80%;
+	background-color: rgba(244, 225, 205, 0.71);
+	display: inline-block;
+	float: left;
+	min-height: 400px;
+}
+
+#main #search {
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	margin-top: 40px; 
+}
+
+#main form {
+	width: 100%;
+}
+
+#main input[type="text"] {
+	width: 80%;
+	height: 40px;
+	font-size: 1.2em;
+}
+
+#main input[type="submit"]{
+	display: block;
+    background: #f4e1cd;
+    width: 16%;
+    height: 35px;
+    position: relative;
+    float: right;
+    top: 6px;
+    border: 1px solid #b9ab9c;
+    border-radius: 3px;
+    font-size: 21px;
+    font-family: Avenir;
+}
+
+#main input[type="submit"]:hover {
+	background: #fdebda;
+	cursor: pointer;
+}
+
+#main #filter {
+	width: 80%;
+	display: block;
+	margin: auto;
+	position: relative;
+}
+
+#main #filter ul {
+	background: transparent;
+	display: inline-block;
+}
+
+#main #filter .filter-box {
+	padding: 8px;
+	background: #f8ebe5;
+	border-radius: 10px;
+	padding-right: 16px;
+	position: relative;
+}
+
+#main #filter .filter-box:before {
+	content:"X";
+	position: absolute;
+	top: 13px;
+	left: 10px;
+	font-size: 18px;
+	color: #4c3222;
+	font-family: fantasy;
+}
+
+.box {
+	display: inline-block;
+	width: 175px;
+	margin-top: 20px;
+}
+
+form select {
+	background: #fffdfa;
+	padding: 5px;
+	position: relative;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.18);
+	z-index: 1;
+	min-height: 80px;
+	min-width: 150px;
+}
+
+.filter-box span {
+	margin-left: 22px;
+	color: #111319; 
+}
+
+#filter span {
+	top:0;
+	display: block;
+}
+
+#mellom {
+	text-align: center;
+	margin-top: 20px; 
+}
+
+#mellom ul {
+	background: transparent;
+	text-shadow: none;
+}
+
+label.heading {
+	text-shadow: 3px 3px 3px white;
+	position: relative;
+	z-index: 2;
+}
+
+
+#sidebar {
+	width: 19%;
+	min-width: 100px;
+	display: inline-block;
+	background-color: rgba(244, 225, 205, 0.71);
+	float: right;
+	min-height: 400px;
+}
+
+#sidebar .sidebar:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #5d5c54;
+    position: absolute;
+    left: 7px;
+    top: 12px;
+}
+
+#sidebar .sidebar {
+	position: relative;
+
+}
+
+.sidebar .active, .sidebar:hover {
+    background-color: #ddd;
+}
+
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    position: relative;
+    z-index: 400;
+ 	font-size: 0.8em;
+}
+
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 70px; 
+	position: relative;
+}
+
+header h1 {
+    font-size: 6vw;
+    letter-spacing: 19px;
+    font-weight: 400;
+	color: #111319
+}
+
+header h3 {
+	letter-spacing: 13px;
+	font-size: initial;
+}
+
+#sidebar .sidebar {
+	float: none;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+	background-color: #fdebd9 !important;
+	border: 1px solid #dccbba;
+	width: 80%;
+	padding: 9px 0;
+	padding-left: 9%;
+	font-family: Avenir;
+	font-size: 0.9em;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+#sidebar ul {
+	background-color: transparent;
+	text-align: center;
+}
+
+footer {
+	position: relative;
+	display: block;
+	height: 300px;
+	width: 100%;
+	background: #3F4755;
+	margin-top: 30px;
+	clear: both;
+}
+
+footer section {
+    width: calc(80% - 100px);
+    margin: auto;
+    top: calc(25% - 22.5px);
+    position: relative;
+    color: transparent;
+}
+
+footer section h2 {
+	text-shadow: 0 -8px 0px #fffdfa;
+}
+
+footer section a {
+	color: #eaded1 !important;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+footer section a:visited {
+	color: #cabaaa !important;
+}
+
+footer section a:hover {
+	color: #fdebda !important;
+}

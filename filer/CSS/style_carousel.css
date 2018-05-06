@@ -1,0 +1,15 @@
+
+.carousel-inner {
+	margin: 0 auto;
+	width:1360px;
+	height:334px;
+
+}
+
+.carousel-controls{
+ position:relative; 
+  width:600px;
+  margin:0 auto;
+  
+}
+
