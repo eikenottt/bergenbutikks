@@ -1,109 +1,218 @@
-/*ett omraade*/
 
-.omraadeNavn {
-	color: white;
-	background: rgba(0,0,0,0.5);
-	border-radius: 11px;
-	padding: 10px;
-	margin: auto;
-}
-
-#omWrapper {
-	min-height: 116px; 
-	position: relative; 
-	margin: 30px;
-}
-
-.card { 
-	min-width: 260px;
-	max-width: 260px;
-	display: inline-flex;
-	min-height: 105px;
-	margin: 16px 1% 0 1%;
-	box-shadow: 0 1px 5px 1px rgba(0,0,0,0.5);
-	position: relative;
-	background: rgb(250,250,250);
-}
-
-/*.card:hover {
-	box-shadow: inset 0 0 50px 50px rgba(255,255,255,0.15);
-}*/
-
-body {
-	background: rgb(244,244,244);
-}
-
-.result {
-	display: inline-block;
-}
-
-#butikkCollection {
-	margin: auto;
-	width: 92%;
-	margin-bottom: 40px; 
-}
-
-.cardlink {
-	margin: auto;
-	font-size: 1.3em;
-	color:black;
-}
-
-.bnavn {
-	font-size: 17px;
-	margin: auto 0;
-	padding-left: 14px;
+#main #result {
 	display: block;
-	color: black;
 }
 
-.bnavn:first-child {
-	padding-top: 10px;
+h2 {
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 21px;
 }
 
-.bnavn:last-child {
-	padding-bottom: 10px;
-}
-
-
-.logo {
+object, img {
+	max-width: 250px;
+	height: auto;
 	position: relative;
-	top: 0;
-	right: 0;
-	margin: 15px 13px;
-	object-fit: cover;
-	height: 25%;
+	display: block;
 }
 
-.logo img {
-	object-fit: contain;
-	width: 234px;
-	height: 120px;
-	margin: 10px 0;
+object {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#result section {
 	position: relative;
+	left: 50%;
+	transform: translatex(-50%);
 }
 
-.aapningstid {
-	width: 220px;
+#nettside {
+	display: block;
+	text-align: center;
 }
 
+.info {
+	display: table;
+	width: 208px;
+	margin-top: 20px;
+	left: 95%;
+	position: relative;
+	transform: translateX(-100%);
+}
 
-@media only screen and (max-width: 608px) {
-	#omWrapper {
-		margin: 30px 0 30px 0;
+.info > * {
+	padding: 3px 9px;
+}
+
+.info div:nth-child(2n+1) {
+	background: var(--secondary-bg-color);
+}
+
+.info span:first-child {
+	display: inline-block;
+	width: 35%;
+	color: grey;
+}
+
+.info span:last-child {
+	display: inline-block;
+	width: 60%;
+}
+
+.description {
+	width: 60%;
+	display: block;
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
+	margin: 60px 0;
+}
+
+.comment_section fieldset {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.comment_section fieldset > * {
+	display: block;
+	box-sizing: border-box;
+}
+
+.comment_section textarea {
+	width: 100%;
+}
+
+form select {
+	background: var(--main-bg-color);
+	padding: 6px;
+	height: 32px;
+	width: 32px;
+	position: relative;
+	z-index: 1;
+	border: 2px solid var(--hover-color);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 50%;
+}
+
+.comments {
+	width: 50%;
+}
+
+.comment {
+	padding: 30px;
+	position: relative;
+	border-bottom: 1px solid var(--button-active-color);
+}
+
+.comment:nth-child(odd) {
+	background: var(--secondary-bg-color);
+}
+
+.comment:nth-child(even) {
+	background: var(--main-bg-color);
+}
+
+.comment.child {
+	margin-left: 2em;
+}
+
+.comment.child::before {
+	content: "";
+	width: 25px;
+	height: 50%;
+	position: absolute;
+	left: -25px;
+	top: 0px;
+	border-bottom: 3px dotted var(--hover-color);
+	border-left: 3px dotted var(--hover-color);
+}
+
+.comment ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comment ul > * {
+	flex-grow: 1;
+	width: 33%;
+	display: inline-flex;
+}
+
+.comment ul .comment_text {
+	width: 100%;
+	margin: 30px 0;
+}
+
+.stars {
+	position: relative;
+	top: 0.4em;
+	color: gold;
+	text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px black, 0 -1px 0 black;
+	font-size: 1.8em;
+}
+
+.rating {
+	position: absolute;
+	right: 35px;
+}
+
+.rating-label {
+	display: block;
+}
+
+li:first-child {
+
+	font-size: 0.9em;
+
+}
+
+.date {
+
+	position: absolute;
+	top: 49px;
+	font-size: 0.7em;
+
+}
+
+@media screen and (max-width: 1170px) {
+	h2 {
+		font-size: 100%;
 	}
-	.card {
+
+	.info {
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+
+	.comments {
 		width: 100%;
-		max-width: 100%;
-		height: 155px;
-		background-size: cover;
-		margin: 2px 0 21px 0;
-	}
-	.cardlink {
-		font-size: 2em;
 	}
 
-	#omWrapper:last-child .card {
-		margin: 0;
+	.comment {
+		padding: 10px 18px;
+		position: relative;
+		border-bottom: 1px solid var(--button-active-color);
 	}
+
+	.date {
+		top: 27px;
+	}
+
+	.rating-label {
+		display: none;
+	}
+
+	.stars {
+		font-size: 2.4em;
+	}
+
 }

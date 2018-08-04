@@ -7,14 +7,13 @@
 // Connect info
 // Defining constants
 // copied from webdesign2 project. change values according to new database.
-define('USER', 'root');
-define('PWD', 'root');
-define('DB', 'bergenbutikker');
-	
+include('/var/www/dikult205/secret/1FW17.inc');
 // Create connection
-$con = @mysqli_connect("localhost", USER, PWD, DB) or die("Can't connect to database! : " . mysqli_connect_error());
-
-$con->set_charset("utf8");
-$con->query("SET NAMES 'utf8'");
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) {
+    die("Unable to connect to database");
+}
+$conn->set_charset("utf8");
+$conn->query("SET NAMES 'utf8'");
 
 ?>
